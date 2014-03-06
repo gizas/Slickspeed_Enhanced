@@ -27,10 +27,11 @@
 
 <div id="myForm">  
    <form name="form1" method="post" action="saveResults.php" onsubmit="return sendResults()">
-     Device Name: <input name="device" id="device" type="text"> <br>
-	 OS name and version: <input name="os" id="os" type="text"> <br>
-	 Browser name and version: <input name="br" id="br" type="text"> <br>
-	 <input name="agent" id="agent" type="hidden" value=""> <br>
+     <table id="myForm"><tr><td id="label">Device Name:</td> <td><input name="device" id="device" type="text"></td> </tr>
+	 <tr><td id="label">OS name and version:</td><td><input name="os" id="os" type="text"></td> </tr>
+	 <tr><td id="label">Browser name and version:</td><td><input name="br" id="br" type="text"></td> </tr>
+	 </table>
+	 <input name="agent" id="agent" type="hidden" value="">
 	 <textarea name="results" id="results" style="display:none;"></textarea>
 	 <input type="submit" value="SEND RESULTS TO SERVER">	 
    </form> 

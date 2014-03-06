@@ -61,7 +61,7 @@
 
 <body>  
 	
-	<?php include('../template.html');?>
+	<?php include('template.html');?>
 
 </body>
 </html>

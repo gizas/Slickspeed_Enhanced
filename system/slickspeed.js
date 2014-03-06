@@ -7,7 +7,9 @@ function forEach(iterable, fn, bind){
 //test start
 
 window.onload = function(){
-	
+		var counter_row=1;//Giz for measuring rows counted
+		var counter_column=0;//Giz for measuring rows counted
+		document.getElementById("myForm").style.display = 'none';
 	var frameworks = {};
 	
 	forEach(document.getElementsByTagName('iframe'), function(iframe){
@@ -36,6 +38,8 @@ window.onload = function(){
 	stop.onclick = function(){
 		clearTimeout(timer);
 		timer = null;
+		alert("Test is stopped!");
+		document.getElementById("device").focus();
 		return false;
 	};
 	
@@ -69,6 +73,7 @@ window.onload = function(){
 				'cell' : cell
 			});
 			frxi++;
+			
 		}
 	});
 	
@@ -110,16 +115,24 @@ window.onload = function(){
 		});
 		
 		var speeds = [];
-		
+
 		forEach(cells, function(cell, i){
 			if (!cell.error) speeds[i] = cell.speed;
 			//error, so we exclude it from colouring good. does not affect score (it should?).
 			else speeds[i] = 99999999999999999999999;
+			counter_column++;
+			console.log(counter_row);
+			if (counter_column==cells.length)
+			counter_row++;
 		});
 		
 		var min = Math.min.apply(this, speeds);
 		var max = Math.max.apply(this, speeds);
-		
+		if (counter_column==cells.length && counter_row==window.selectors.length){
+			setTimeout(function(){alert("Test is finished!");
+			document.getElementById("myForm").style.display = 'block';
+			document.getElementById("device").focus();},1000);
+		}
 		var found = [];
 		var mismatch = false;
 		forEach(cells, function(cell, i){

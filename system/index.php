@@ -11,7 +11,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>SlickSpeed Selectors Test</title>
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../style.css" type="text/css" media="screen">
 	
 	<script type="text/javascript">
 		<?php
@@ -22,7 +22,7 @@
 		?>
 	</script>
 	
-	<script src="system/slickspeed.js" type="text/javascript"></script>
+	<script src="../system/slickspeed.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -34,14 +34,14 @@
 		<a class="start" href="#">start tests</a>
 	</div>
 	
-<?php include('header.html'); ?>
+<?php include('../header.html'); ?>
 
 <?php
 	foreach ($frameworks as $framework => $properties){
 		$include = $properties['file'];
 		$function = $properties['function'];
 		$time = time();
-		echo "<iframe name='$framework' src='system/template.php?include=$include&function=$function&nocache=$time'></iframe>\n\n";
+		echo "<iframe name='$framework' src='template.php?include=$include&function=$function&nocache=$time'></iframe>\n\n";
 	}
 ?>
 
@@ -79,6 +79,8 @@
 			foreach ($frameworks as $framework){
 				echo "<td class='score'>0</td>";
 			}
+			
+
 		?>
 		</tr>
 	</tfoot>
@@ -105,7 +107,6 @@
 
 </table>
 
-<?php include('footer.html'); ?>
 </div>
 
 </body>
