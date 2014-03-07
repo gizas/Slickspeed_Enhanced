@@ -1,10 +1,12 @@
 Slickspeed_Enhanced and Slickspeed_Commands
 ===================
+
+====================================================================================================
 Slickspeed-Enhanced supports major Javascripts Libraries testing against selectors provided
 
 Slickspeed-Commnads supports Javascripts Libraries testing against commands of JavaScript
 The implementation includes jQuery commands but it can be extended to any other Javascript Library 
-====================================================================================================
+
 
 Both these Slickspeed_Enhanced ans Slickspeed_commands are an enhanced version of slickspeed test suite selector.
 
