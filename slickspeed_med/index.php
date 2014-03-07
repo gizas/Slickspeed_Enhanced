@@ -46,9 +46,6 @@ else
 <div><a href="index.php?small">Small Size of Dom</a>
 </div>
 </div></td>
-<td>
-<?php include('../footer.html'); ?>
-</td>
 </tr>
 </table>
 

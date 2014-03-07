@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	
+<a NAME="top"></a>	
 <div id="container">
 	
 	<div id="controls">
@@ -106,7 +106,10 @@
 	</tr>
 
 </table>
-
+<div>
+<?php include('../footer.html'); ?>
+</div>
+<div><a href="#top" border="0"><img src="../back.png"></a></div>
 </div>
 
 </body>

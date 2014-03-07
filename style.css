@@ -179,6 +179,7 @@ div#footer p {
 	color: #B9ACAC;
 }
 
+/*Form manipulation*/
 button,input,select,textarea{padding: .5em .6em;
 display: inline-block;
 border: 1px solid #ccc;
@@ -187,10 +188,11 @@ border-radius: 4px;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
 box-sizing: border-box;}
-td#label{max-width:60px}
-input{width:96%}
+td.label{max-width:60px}
+input{width:80%}
 input[type=submit]{background: #528CE0;border:2px solid white}
 input[type=submit]:hover{background: #41464D;}
 div#myForm {max-width:400px}
 #myForm td{border:0;padding:0}
 .myForm td{font-weight:normal}
+#idl,#osl,#brl{display:none;color:red}

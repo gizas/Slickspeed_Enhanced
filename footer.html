@@ -1,35 +1,47 @@
 <script type="text/javascript">
       function sendResults() {    
-		var device = document.getElementById("device");
-		var os = document.getElementById("os");
-		var br = document.getElementById("br");
-		if (device.value=="" || device.value==null) {
-			alert("Please provide the device name.");
-			device.focus();
-			return false;
-		}
-		if (os.value=="" || os.value==null) {
-			alert("Please provide the OS name and version.");
-			os.focus();
-			return false;
-		}
-		if (br.value=="" || br.value==null) {
-			alert("Please provide the Browser's name and version");
-			br.focus();
-			return false;
-		}
-
+		var id=document.forms["form1"].device.value;
+  	  var os=document.forms["form1"].os.value;
+	  var br=document.forms["form1"].br.value;
+	  if (id==null || id=="" || id.match(/^\s+$/))
+	  {document.getElementById("idl").style.display="inline";
+	  document.getElementById("osl").style.display="none";
+	  document.getElementById("brl").style.display="none";
+	  document.getElementById("device").style.borderColor="red";
+	  document.getElementById("os").style.borderColor="#ccc";
+	  document.getElementById("br").style.borderColor="#ccc";
+	  return false;}
+	  else if (os==null || os=="" || os.match(/^\s+$/))
+	  {document.getElementById("osl").style.display="inline";
+	  document.getElementById("idl").style.display="none";
+	  document.getElementById("brl").style.display="none";
+	  document.getElementById("os").style.borderColor="red";
+	  document.getElementById("device").style.borderColor="#ccc";
+	  document.getElementById("br").style.borderColor="#ccc";
+	  return false;}
+	  else if (br==null || br=="" || br.match(/^\s+$/))
+	  {document.getElementById("brl").style.display="inline";
+	  document.getElementById("osl").style.display="none";
+	  document.getElementById("idl").style.display="none";
+	  document.getElementById("br").style.borderColor="red";
+	  document.getElementById("device").style.borderColor="#ccc";
+	  document.getElementById("os").style.borderColor="#ccc";
+	  return false;}
+	  
+	  else{
 		document.getElementById("agent").value=navigator.userAgent;
 		document.getElementById("results").value=document.getElementById("TableResults").innerHTML;
 	    return true;
+		}
 	  }
    </script>
 
 <div id="myForm">  
+<h2>   Save data to your server:</h2>
    <form name="form1" method="post" action="saveResults.php" onsubmit="return sendResults()">
-     <table id="myForm"><tr><td id="label">Device Name:</td> <td><input name="device" id="device" type="text"></td> </tr>
-	 <tr><td id="label">OS name and version:</td><td><input name="os" id="os" type="text"></td> </tr>
-	 <tr><td id="label">Browser name and version:</td><td><input name="br" id="br" type="text"></td> </tr>
+     <table id="myForm"><tr><td class="label">Device Name:</td> <td><input name="device" id="device" type="text"><label id="idl"> *Empty Field</label></td> </tr>
+	 <tr><td class="label">OS name and version:</td><td><input name="os" id="os" type="text"><label id="osl"> *Empty Field</label></td> </tr>
+	 <tr><td class="label">Browser name and version:</td><td><input name="br" id="br" type="text"><label id="brl"> *Empty Field</label></td> </tr>
 	 </table>
 	 <input name="agent" id="agent" type="hidden" value="">
 	 <textarea name="results" id="results" style="display:none;"></textarea>

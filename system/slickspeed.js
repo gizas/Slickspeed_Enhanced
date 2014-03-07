@@ -31,6 +31,7 @@ window.onload = function(){
 	var stop = links[0];
 	
 	start.onclick = function(){
+		document.getElementById("myForm").style.display = 'none';
 		testRunner();
 		return false;
 	};
@@ -39,6 +40,7 @@ window.onload = function(){
 		clearTimeout(timer);
 		timer = null;
 		alert("Test is stopped!");
+		document.getElementById("myForm").style.display = 'block';
 		document.getElementById("device").focus();
 		return false;
 	};
@@ -121,7 +123,6 @@ window.onload = function(){
 			//error, so we exclude it from colouring good. does not affect score (it should?).
 			else speeds[i] = 99999999999999999999999;
 			counter_column++;
-			console.log(counter_row);
 			if (counter_column==cells.length)
 			counter_row++;
 		});
@@ -160,31 +161,4 @@ window.onload = function(){
 	
 
 };
-
-
-      function sendResults() {
-		siskevi = getElementById("siskevi");
-		os = getElementById("os");
-		br = getElementById("br");
-		if (siskevi=="" || siskevi==null) {
-			alert("Simplirwse ti syskevi");
-			siskevi.focus();
-			return false;
-		}
-		if (os=="" || os==null) {
-			alert("Simplirwse to leitoyrgiko");
-			os.focus();
-			return false;
-		}
-		if (br=="" || br==null) {
-			alert("Simplirwse ton browser");
-			br.focus();
-			return false;
-		}
-
-		getElementById("device").value=navigator.userAgent;
-		getElementById("results").value=getElementById("results").innerHTML;
-	    return true;
-	  }
-
 
