@@ -7,7 +7,7 @@ function forEach(iterable, fn, bind){
 //test start
 
 window.onload = function(){
-		var counter_row=1;//Giz for measuring rows counted
+		var counter_row=0;//Giz for measuring rows counted
 		var counter_column=0;//Giz for measuring rows counted
 		document.getElementById("myForm").style.display = 'none';
 	var frameworks = {};
@@ -123,13 +123,14 @@ window.onload = function(){
 			//error, so we exclude it from colouring good. does not affect score (it should?).
 			else speeds[i] = 99999999999999999999999;
 			counter_column++;
-			if (counter_column==cells.length)
+			if (counter_column%cells.length==0)
 			counter_row++;
 		});
 		
 		var min = Math.min.apply(this, speeds);
 		var max = Math.max.apply(this, speeds);
-		if (counter_column==cells.length && counter_row==window.selectors.length){
+		console.log(counter_row);
+		if (counter_row==window.selectors.length-1){
 			setTimeout(function(){alert("Test is finished!");
 			document.getElementById("myForm").style.display = 'block';
 			document.getElementById("device").focus();},1000);

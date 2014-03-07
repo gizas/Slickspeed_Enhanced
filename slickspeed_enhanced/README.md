@@ -1,15 +1,16 @@
-Slickspeed_Enhanced and Slickspeed_commands
+Slickspeed_Enhanced
 ===================
-Slickspeed-Enhanced supports major Javascripts Libraries testing against selectors provided
 
-Slickspeed-Commnads supports Javascripts Libraries testing against commands of JavaScript. The implementation includes jQuery commands but it can be extended to any other Javascript Library 
+Slickspeed_Enhanced
+
+based on the Slickspeed implementation (https://github.com/kamicane/slickspeed/tree/master)
 ====================================================================================================
 
-Both these Slickspeed_Enhanced ans Slickspeed_commands are an enhanced version of slickspeed test suite selector.
+Slickspeed_Enhanced is an enhanced version of slickspeed test suite selector.
 
 Slickspeed provides Speed / Validity tests for dom queries in JavaScript web frameworks.
 
-Our implementations additionally provides:
+Our implementation additionally provides:
 
 1. Save your results on the server you run within a form. Organise and analyse you results later
 
@@ -19,6 +20,8 @@ Our implementations additionally provides:
 
 4. A new analysed test-suite of selectors for full analysis for every JL. We provide a new group of 263 selectors !!!!
 (We have extracted those selectors based on real stats from css sites)
+
+INSTALLATION: ****Just create a folder slickspeed under your server and put all data below this folder*****
 
 In the implementation we provide three different implementations of Slickspeed_enhanced with different DOM size.
 We have a small, medium and big DOM size for extensive analysis of each JL.

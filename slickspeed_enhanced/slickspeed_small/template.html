@@ -1,0 +1,191 @@
+ <div id=myBody>   <!-- SMALL DOM -->
+   <h1 id=title>Selectors Level 3</h1>
+
+   <ul class=toc>
+	<li><a href="#context"><span class=secno>1. </span>Introduction</a>
+	<ul class=toc>
+	 <li><a href="#dependencies"><span class=secno>1.1.
+	  </span>Dependencies</a>
+	 <li><a href="#terminology"><span class=secno>1.2. </span>Terminology</a>
+	 <li><a href="#changesFromCSS2"><span class=secno>1.3. </span>Changes
+	  from CSS2</a>
+	</ul>
+	 <li><a href="#selectors"><span class=secno>2. </span>Selectors</a>
+	</ul>
+
+  <table class=selectorsReview>
+   <thead>
+    <tr>
+     <th class=meaning colspan=2>Meaning
+
+     <th class=described>Described in section
+
+   <tbody>
+    <tr>
+     <td class=meaning>any element
+
+     <td class=described><a href="#universal-selector">Universal selector</a>
+
+  </table>
+  
+   <p id=nsdecl>Certain selectors support namespace prefixes. The mechanism by
+   which namespace prefixes are <dfn id=declared>declared</dfn> should be
+   specified by the language that uses Selectors. If the language does not
+   specify a namespace prefix declaration mechanism, then no prefixes are
+   declared. In CSS, namespace prefixes are declared with the <a
+   href="http://www.w3.org/TR/css3-namespace/#declaration"><code>@namespace</code></a>
+   rule. <a href="#CSS3NAMESPACE" rel=biblioentry>[CSS3NAMESPACE]<!--{{!CSS3NAMESPACE}}--></a>
+   
+  <h4 id=content-selectors><span class=secno>6.6.6. </span>Blank</h4>
+  <!-- It's the Return of Appendix H!!! Run away! -->
+
+ 
+  <div class=example>
+   <p>Example:</p>
+
+   <p><a name=overlapping-example>The following CSS and HTML example</a>
+    illustrates how overlapping pseudo-elements may interact. The first
+    letter of each P element will be green with a font size of &rsquo;24pt'.
+    The rest of the first formatted line will be &lsquo;<code
+    class=property>blue</code>&rsquo; while the rest of the paragraph will be
+    &lsquo;<code class=property>red</code>&rsquo;.</p>
+
+   <pre>p { color: red; font-size: 12pt }
+p::first-letter { color: green; font-size: 200% }
+p::first-line { color: blue }
+
+&lt;P&gt;Some text that ends up on two lines&lt;/P&gt;</pre>
+
+   <p>Assuming that a line break will occur before the word "ends", the <span
+    class=index-inst id=fictional-tag-sequence title="fictional tag
+    sequence">fictional tag sequence</span> for this fragment might be:</p>
+
+   <pre>&lt;P&gt;
+&lt;P::first-line&gt;
+&lt;P::first-letter&gt; 
+S 
+&lt;/P::first-letter&gt;ome text that 
+&lt;/P::first-line&gt; 
+ends up on two lines 
+&lt;/P&gt;</pre>
+
+
+   </div>
+
+  
+  <h3 id=dependencies><span class=secno>1.1. </span>Dependencies</h3>
+  
+  <h2 id=specificity><span class=secno>9. </span>Calculating a selector's
+   specificity</h2>
+
+	
+  <div class=example>
+   <p>Example:</p>
+
+   <p>After the rule <code>p::before {content: "Note: "}</code>, the selector
+    <code>p::first-letter</code> matches the "N" of "Note".</p>
+  </div>
+
+  <p>In CSS a ::first-line pseudo-element is similar to an inline-level
+   element if its &lsquo;<code class=property>float</code>&rsquo; property is
+   &lsquo;<code class=property>none</code>&rsquo;; 
+
+  
+<!-- #####################################################################################-->  
+<div id=myDiv class=myClass>
+
+  <h2 id=references><span class=secno>15. </span>References</h2>
+
+  <h3 id=normative-references><span class=secno>15.1. </span>Normative
+   References</h3>
+   
+  <p class=note><strong>Note</strong>: the :not() pseudo allows useless
+   selectors to be written. For instance <code>:not(*|*)</code>, which
+   represents no element at all, or <code>foo:not(bar)</code>, which is
+   equivalent to <code>foo</code> but with a higher specificity.
+
+  <!--begin-normative-->
+  <!-- Sorted by label -->
+
+  <dl class=bibliography>
+   <dt style="display: none"><!-- keeps the doc valid if the DL is empty -->
+    <!---->
+
+   <dt id=BCP47>[BCP47]
+
+   <dd>A. Phillips;  M. Davis<a
+    href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt"><cite>Tags for Identifying Languages</cite> and <cite>Matching of Language Tags</cite>.</a> September 2009. Internet Best
+    Current Practice 47. URL: <a
+    href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">http://www.rfc-editor.org/rfc/bcp/bcp47.txt</a>
+    </dd>
+   <!---->
+
+   <dt id=CSS1>[CSS1]
+
+   <dd>H&#229;kon Wium Lie; Bert Bos. <a
+    href="http://www.w3.org/TR/2008/REC-CSS1-20080411"><cite>Cascading Style
+    Sheets (CSS1) Level 1 Specification.</cite></a> 11 April 2008. W3C
+    Recommendation. URL: <a
+    href="http://www.w3.org/TR/2008/REC-CSS1-20080411">http://www.w3.org/TR/2008/REC-CSS1-20080411</a>
+    </dd>
+   <!---->
+
+  </dl>
+
+  
+  <!-- ***************************************** FORM ***************************** -->
+      <form name="form1" id="formId" action="examples_submit" method="get" accept-charset="utf-8" class="myForm">
+             <div class="left">
+                 <div><input name="T1" id="T1" type="text" value="text input" /></div>
+                 <div><input name="T2" id="T2" type="text" value="disabled text input" disabled="disabled" /></div>
+                 <div><input name="T3" id="T3" type="hidden" value="hidden text input" /></div>	
+				 <div id="hidiv" style="display:none;">Hiden Text!</div>			 
+                 <div><input type="password" name="password" value="password" /></div>
+                 <div>
+				  <select name="S1">
+                   <option>select list w/ options</option>
+                   <option>another option</option>
+                   <option>a third option</option>
+                  </select>
+                 </div>
+             </div>
+             <textarea name="T4" class="left" rows="5" cols="20">This is a textarea</textarea>
+			 <div><select name="S2" size="5" style="margin-left:10px">
+                   <option>select list w/ options</option>
+                   <option selected="selected">another option</option>
+                   <option>a third option</option>
+                 </select>
+			 </div>
+             <div class="clear-left">
+				 <label for="radio1">
+				   <input class="left" name="radiobtn" type="radio" id="radio1" value="checkedradio" checked="checked" />
+				   Radio Checked
+				 </label>
+				 <div><div><div><table><tr><td><span id="deep"></span></td></tr></table></div></div></div>
+				 <label class="left clear-left" for="radio2">
+				   <input class="left" id="radio2" name="radiobtn" type="radio" value="not" />
+					 Radio Not Checked
+				 </label>
+				 <label class="left clear-left" for="check1">
+				   <input class="left" id="check1" name="checkbx" type="checkbox" value="checked" checked="checked" />
+				   Checkbox Checked
+				 </label>
+				 <label class="left clear-left" for="check2">
+				   <input class="left" id="check2" name="checkbx" type="checkbox" value="not" />
+					 Checkbox Not Checked
+				 </label>
+				 <label class="left clear-left" for="check3">
+				   <input class="left" id="check3" name="checkbx" type="checkbox" value="not" />
+					 Another checkbox Not Checked
+				 </label>
+             </div>
+			              
+             <div class="left clear-left"><input type="submit" value="Submit input" /></div>
+             <div class="left"><input type="button" value="Button input" /></div>
+             <div class="left"><input type="reset" value="Reset input" /></div>
+             <div class="left"><input type="image" src="select-form_files/image.gif" value="Image input" /></div>
+             <div class="left"><button>Button button</button></div>
+             <div class="left clear-left"><input type="file" name="fileinput" value="file input" id="fileinput" /></div>              
+           </form>
+</div>   <!-- ************************ -->
+</div>

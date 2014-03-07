@@ -1,0 +1,22 @@
+1) edit config.ini and fill in your framework list for each dom size template.
+2) edit selectors.list and edit your selectors list for each dom size template
+3) edit style.css, header.html and footer.html if you wish.
+4) edit template.html if you want to change the selectors html file for each dom size template.
+Moreover slickpseed_enhanced offers:
+
+a)Ready selectors are provided for every dom size template.
+b)User can navigate with:
+1. index.php?big to big Dom size pages
+2. index.php?med to med Dom size pages
+3. index.php?small to small Dom size pages
+
+wherever they are, just for easier manipulation.
+
+c)Alert messages inform user for test completion.
+d)Form is enabled when tests are finished in order to save your results. 
+e)Empty fields are checked when the user submits data. If no data or empty fields are being send an error message informs the user.
+f)ShowResults.php summarises all result tests that have been saved per DOM size
+g)With mouse over (in showResults.php) you can preview the results of the page.
+h)Toggle button erases the unnecessary values from tests (in results.php files), in order to help extraction of data.
+
+INSTALLATION:Just copy folder slickspeed_commands under htdocs of your server

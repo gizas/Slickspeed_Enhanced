@@ -20,15 +20,15 @@ function full_path()
 $my_url= full_path();
 $my_url= full_path();
 if (strpos($my_url,'big') !== false) {
-    header( 'Location: /slickspeed/slickspeed_big' ) ;
+    header( 'Location: /slickspeed_enhanced/slickspeed_big' ) ;
 }
 
 else if (strpos($my_url,'med') !== false) {
-    header( 'Location: /slickspeed/slickspeed_med' ) ;
+    header( 'Location: /slickspeed_enhanced/slickspeed_med' ) ;
 }
 
 else if (strpos($my_url,'small') !== false) {
-    header( 'Location: /slickspeed/slickspeed_small' ) ;
+    header( 'Location: /slickspeed_enhanced/slickspeed_small' ) ;
 }
 
 else
@@ -39,9 +39,9 @@ else
 <tr>
 <td>
 <div>Choose size of document for testing:</div>
-<div>>Big Size of Dom
+<div><a href="index.php?big">Big Size of Dom</a>
 </div>
-<div><a href="index.php?med">Medium Size of Dom</a>
+<div>>Medium Size of Dom
 </div>
 <div><a href="index.php?small">Small Size of Dom</a>
 </div>

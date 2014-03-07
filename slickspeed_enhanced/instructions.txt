@@ -19,3 +19,4 @@ f)ShowResults.php summarises all result tests that have been saved per DOM size
 g)With mouse over (in showResults.php) you can preview the results of the page.
 h)Toggle button erases the unnecessary values from tests (in results.php files), in order to help extraction of data.
 
+INSTALLATION:Just copy folder slickspeed_enhanced under htdocs of your server
