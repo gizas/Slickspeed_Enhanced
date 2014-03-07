@@ -20,15 +20,15 @@ function full_path()
 $my_url= full_path();
 $my_url= full_path();
 if (strpos($my_url,'big') !== false) {
-    header( 'Location: /slickspeed_commnads/slickspeed_big' ) ;
+    header( 'Location: /slickspeed_commands/slickspeed_big' ) ;
 }
 
 else if (strpos($my_url,'med') !== false) {
-    header( 'Location: /slickspeed_commnads/slickspeed_med' ) ;
+    header( 'Location: /slickspeed_commands/slickspeed_med' ) ;
 }
 
 else if (strpos($my_url,'small') !== false) {
-    header( 'Location: /slickspeed_commnads/slickspeed_small' ) ;
+    header( 'Location: /slickspeed_commands/slickspeed_small' ) ;
 }
 
 else
