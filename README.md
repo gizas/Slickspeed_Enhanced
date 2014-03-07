@@ -1,4 +1,4 @@
-Slickspeed_Enhanced and Slickspeed_commands
+Slickspeed_Enhanced and Slickspeed_Commands
 ===================
 Slickspeed-Enhanced supports major Javascripts Libraries testing against selectors provided
 
